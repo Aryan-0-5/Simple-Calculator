@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf ("Enter\n");
+	float operand1,operand2,ans;
+	char operator1;
+	bool flag=true;
+	scanf ("%f %c %f",&operand1,&operator1,&operand2);
+	switch (operator1)
+	{
+		case '+':
+			ans=operand1+operand2;
+			break;
+		case '-':
+			ans=operand1-operand2;
+			break;
+		case '*':
+			ans=operand1*operand2;
+			break;
+		case 'x':
+			ans=operand1*operand2;
+			break;
+		case '/':
+			ans=operand1/operand2;
+			break;
+		case '^':
+			ans= pow (operand1,operand2);
+			break;
+		default:
+			printf ("Invalid operator\n");
+			flag=false;
+	}
+	if (flag==true)
+		printf ("%.3f %c %.3f =		%.3f",operand1,operator1,operand2,ans);
+
+}
